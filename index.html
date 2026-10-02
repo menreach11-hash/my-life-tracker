@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Life</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="authScreen" class="auth-screen">
+
+    <div class="auth-box">
+
+        <h1>My Life</h1>
+
+        <p>Sign in to continue</p>
+
+        <input
+            id="emailInput"
+            type="email"
+            placeholder="Email"
+        >
+
+        <input
+            id="passwordInput"
+            type="password"
+            placeholder="Password"
+        >
+
+        <button id="loginButton">
+            Sign in
+        </button>
+
+        <button id="signupButton">
+            Create account
+        </button>
+
+        <p id="authMessage"></p>
+
+    </div>
+
+</div>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="date" id="date"></p>
+                <h1 id="greeting">Good evening</h1>
+            </div>
+
+            <button id="historyButton" class="secondary-button">
+                History
+            </button>
+
+        </header>
+
+
+        <!-- TODAY -->
+        <section id="todayView">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="label">Today</p>
+                    <h2 id="taskSummary">0 tasks</h2>
+                </div>
+
+                <div class="progress-container">
+
+                    <div class="progress-background">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <span id="progressText">0%</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASKS -->
+            <div id="taskList"></div>
+
+
+            <!-- ADD TASK -->
+            <div class="add-task">
+
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="Add a task..."
+                    maxlength="100"
+                >
+
+                <select id="categoryInput">
+
+                    <option value="General">General</option>
+                    <option value="Study">Study</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Trading">Trading</option>
+                    <option value="Coding">Coding</option>
+
+                </select>
+
+                <button id="addButton">+</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY -->
+        <section id="historyView" class="hidden">
+
+            <div class="history-header">
+
+                <div>
+                    <p class="label">History</p>
+                    <h2>Your previous days</h2>
+                </div>
+
+                <button id="todayButton" class="secondary-button">
+                    Today
+                </button>
+
+            </div>
+
+            <div id="historyList"></div>
+
+        </section>
+
+
+        <footer>
+            Your data is saved on this device.
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
